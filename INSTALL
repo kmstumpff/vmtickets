@@ -1,5 +1,11 @@
-sudo npm install -g mongodb      // To store tickets
-sudo npm install -g monk         // To store tickets
-sudo npm install -g nodemailer   // To send email on new ticket
+# install mongodb
+# http://docs.mongodb.org/manual/administration/install-on-linux/
+
+# install node.js
+# http://nodejs.org/download/
+
+sudo npm install -g mongodb      # To store tickets
+sudo npm install -g monk         # To store tickets
+sudo npm install -g nodemailer   # To send email on new ticket
 sudo npm update
 npm start
