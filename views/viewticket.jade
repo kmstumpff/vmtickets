@@ -1,0 +1,63 @@
+extends layout
+block header
+    include header
+
+block content
+  each ticket, i in ticketlist
+    
+    //form#formOptions(name="options",method="post",action="/saveoptions")
+    //
+      span New Status:
+      select(name="status")      
+        if (ticket.status == "Open")
+          option(value="Open", selected="selected")= "Open"
+        else
+          option(value="Open")= "Open"
+        if (ticket.status == "In Progress")
+          option(value="In Progress", selected="selected")= "In Progress"
+        else
+          option(value="In Progress")= "In Progress"
+        if (ticket.status == "On Hold")
+          option(value="On Hold", selected="selected")= "On Hold"
+        else
+          option(value="On Hold")= "On Hold"
+        if (ticket.status == "Closed")
+          option(value="Closed", selected="selected")= "Closed"
+        else
+          option(value="Closed")= "Closed"
+      br
+      textarea#inputNotes(form="formOptions",cols="53",rows="5",name="notes",placeholder="Notes for status change")
+      input#inputID(type="hidden",name="id",value=ticket.id)
+      br
+      button#btnSubmit(type="submit") Save
+    h1 #{ticket.summary} (#{ticket.status})
+    p(style="font-size: 18px") User: #{ticket.name}
+    p(style="font-size: 16px") Date: #{ticket.date}
+    br
+    .well
+      p !{ticket.description.replace(/\n/g, '<br>')}
+    br
+    form#formOptions(name="options",method="post",action="/saveoptions")
+      span New Status:
+      select(name="status")
+        if (ticket.status == "Open")
+          option(value="Open", selected="selected")= "Open"
+        else
+          option(value="Open")= "Open"
+        if (ticket.status == "In Progress")
+          option(value="In Progress", selected="selected")= "In Progress"
+        else
+          option(value="In Progress")= "In Progress"
+        if (ticket.status == "On Hold")
+          option(value="On Hold", selected="selected")= "On Hold"
+        else
+          option(value="On Hold")= "On Hold"
+        if (ticket.status == "Closed")
+          option(value="Closed", selected="selected")= "Closed"
+        else
+          option(value="Closed")= "Closed"
+      br
+      textarea#inputNotes(form="formOptions",cols="53",rows="5",name="notes",placeholder="Notes for status change")
+      input#inputID(type="hidden",name="id",value=ticket.id)
+      br
+      button#btnSubmit(type="submit") Save

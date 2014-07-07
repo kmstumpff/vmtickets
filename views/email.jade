@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  h1= title
+  form#formAddUser(name="setemail",method="post",action="/setemail")
+    //span Sending address:
+    //br
+    //input#inputUserName(type="text",placeholder="Name",name="fname")
+    //br
+    //input#inputUserEmail(type="text",placeholder="Email",name="femail")
+    //br
+    //input#inputPassword(type="password",placeholder="Password",name="fpassword")
+    //br
+    span Receiving address:
+    br
+    input#inputUserName(type="text",placeholder="Name",name="tname")
+    br
+    input#inputUserEmail(type="text",placeholder="Email",name="temail")
+    br
+    button#btnSubmit(type="submit") submit

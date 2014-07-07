@@ -23,3 +23,10 @@ build/Release
 # Deployed apps should consider commenting this line out:
 # see https://npmjs.org/doc/faq.html#Should-I-check-my-node_modules-folder-into-git
 node_modules
+<<<<<<< HEAD
+
+#misc
+data
+bin
+=======
+>>>>>>> 3cff4c36c6b83f3e0244524e8fba1fbb5ec63bfb

@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1.
+      Ticket List
+  //a(href="/newticket")= "Add a new ticket"
+  table(class="table")
+    thead
+      tr
+        th= "Entered By"
+        th= "Status"
+        th= "Summary"
+        th= "Date Entered"
+    tbody
+      each ticket, i in ticketlist
+          tr
+            th= ticket.name
+            th= ticket.status
+            th
+              a(href="/viewticket?id=" + ticket.id)= ticket.summary
+            th= ticket.date

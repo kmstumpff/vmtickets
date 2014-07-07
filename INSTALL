@@ -1,0 +1,5 @@
+sudo npm install -g mongodb      // To store tickets
+sudo npm install -g monk         // To store tickets
+sudo npm install -g nodemailer   // To send email on new ticket
+sudo npm update
+npm start

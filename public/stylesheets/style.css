@@ -1,0 +1,33 @@
+.container-content {
+  padding-top: 15px;
+  padding-right: 5%;
+  padding-left: 5%;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.divide {
+  border-top: 2px solid #ccc;
+}
+
+button#btnSubmit {
+background:#ddd;
+color:#222;
+font-family: Tahoma, Geneva, sans-serif;
+height:24px;
+}
+input.button:hover {
+background:#fff;
+color:#999;
+}

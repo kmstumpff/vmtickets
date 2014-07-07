@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1= title
+
+  form#formAddUser(name="adduser",method="post",action="/addticket")
+    span.glyphicon.glyphicon-user &nbsp
+    select(name="name")
+      option(value="" disabled="disabled" selected="selected")= "Username"
+      each user, i in userlist
+        option(value=user.username)= user.username
+    br
+    br
+    input#inputSummary(type="text",placeholder="Summary",name="summary",size="70")
+    br
+    br
+    textarea#inputDescription(form="formAddUser",cols="53",rows="5",name="description",placeholder="Description")
+    br
+    button#btnSubmit(type="submit") Add

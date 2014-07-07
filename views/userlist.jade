@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1.
+      User List
+  a(href="/newuser")= "Add a new user"
+  span(style="float:right")
+    a(href="/delusers")= "Remove all users"
+  table(class="table")
+    thead
+      tr
+        th= "Name"
+        th= "Email"
+    tbody
+      each user, i in userlist
+          tr
+            th= user.username
+            th
+              a(href="mailto:#{user.useremail}")= user.useremail
